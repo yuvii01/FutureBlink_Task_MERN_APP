@@ -1,0 +1,71 @@
+.input-node {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 0;
+  width: 280px;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3), 0 0 24px rgba(59, 130, 246, 0.2);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInUp 0.5s ease-out;
+}
+
+.input-node:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4), 0 0 32px rgba(59, 130, 246, 0.3);
+  border-color: #60a5fa;
+}
+
+.input-node .node-header {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 700;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-node .node-header::before {
+  content: '📝';
+  font-size: 16px;
+}
+
+.input-node .node-content {
+  padding: 16px;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.input-node .placeholder {
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.input-node p {
+  margin: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
